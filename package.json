@@ -2,7 +2,7 @@
   "name": "vue-quran",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "harran55 <h.almarra@gmail.com>",
+  "author": "harran55 <gmail@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
