@@ -40,9 +40,10 @@ export default {
         })
     },
     zmode () {
+      this.mode = this.mode == 'light' ? 'dark' : 'light'
       var body = document.body
       body.setAttribute('class', this.mode == 'light' ? 'dark' : 'light')
-      this.mode = this.mode == 'light' ? 'dark' : 'light'
+     
     }
   },
   mounted() {
