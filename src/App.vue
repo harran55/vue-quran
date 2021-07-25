@@ -1,6 +1,5 @@
 <template>
   <div id="app" class="light">
-    <img src="./assets/logo.png" class="logo" />
     <b-button class="mode" @click="zmode">
       <b-icon-moon />
     </b-button>
@@ -11,14 +10,10 @@
 <script>
 import axios from "axios";
 
-import Footer from "@/components/Footer.vue";
 import jsonAudio from "@/assets/audio.json";
 
 export default {
   name: "App",
-  components: {
-    Footer,
-  },
   data() {
     return {
       settings: {
