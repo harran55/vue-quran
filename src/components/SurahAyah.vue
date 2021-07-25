@@ -130,7 +130,7 @@ export default {
             show: false,
             tRead: Number,
             volume: 1,
-            fontSize: 16,
+            fontSize: 40,
             fontWord: 2,
             page_repeat: 'page',
             reayah: 0,
