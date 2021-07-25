@@ -14,6 +14,7 @@
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
     "build": "node build/build.js",
     "vite-build": "vite build --out-dir dist",
+    "predeploy": "yarn vite-build",
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
