@@ -188,7 +188,8 @@
 <script>
 import axios from "axios";
 import carousel from "vue-owl-carousel";
-import jsonAudio from "@/assets/Audio";
+
+import jsonAudio from "@/assets/audio.json";
 
 export default {
   name: "SurahAyah",
