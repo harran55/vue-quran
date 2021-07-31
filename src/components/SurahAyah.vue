@@ -26,7 +26,7 @@
           <b-button
             v-for="(val, int) in options"
             :key="int"
-            :variant="(page_repeat == val.value ? 'primary' : '')"
+            :variant="(repeatRecitation == val.value ? 'primary' : '')"
             @click="repeat(val.value)"
             class="iplay"
             :id="'btn' + int"
@@ -210,7 +210,7 @@ export default {
       volume: 1,
       fontSize: 40,
       fontWord: 2,
-      page_repeat: "page",
+      repeatRecitation: "next",
       reayah: 0,
       options: [
         { text: "سيتم تكرار قراءة الصفحة", value: "page" },
@@ -260,11 +260,11 @@ export default {
 
       audio.onended = () => {
         if (
-          (coun - 1 > id && this.page_repeat == "page") ||
-          (coun - 1 > id && this.page_repeat == "next")
+          (coun - 1 > id && this.repeatRecitation == "page") ||
+          (coun - 1 > id && this.repeatRecitation == "next")
         ) {
           this.xplay(id + 1);
-        } else if (this.page_repeat == "ayah") {
+        } else if (this.repeatRecitation == "ayah") {
           if (this.reayah < 2) {
             this.xplay(id);
             this.reayah++;
@@ -272,9 +272,9 @@ export default {
             this.reayah = 0;
             this.xplay(id + 1);
           }
-        } else if (this.page_repeat == "page") {
+        } else if (this.repeatRecitation == "page") {
           this.xplay(0);
-        } else if (this.page_repeat == "next") {
+        } else if (this.repeatRecitation == "next") {
           if (this.page <= 603) {
             this.$router.push("/" + (this.page + 1));
           } else {
@@ -290,7 +290,7 @@ export default {
       this.$router.push(`/${this.par}`);
     },
     repeat(val) {
-      this.page_repeat = val;
+      this.repeatRecitation = val;
     },
     reReader(val) {
       this.$parent.settings.reader = val;
